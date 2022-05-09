@@ -1,9 +1,10 @@
 import "./App.css";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className='App'>
-      <p>Delivea - product by Mimi, Kohol, Poga &amp; Clement</p>
+      <Home />
     </div>
   );
 }
