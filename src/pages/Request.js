@@ -4,12 +4,12 @@ import React from "react";
 import Nav from "../components/common/nav";
 import Container from "../components/container";
 
-const Home = () => {
+const Request = () => {
   return (
-    <Container title='Delivea - Your Ultimate Logistics Partner'>
+    <Container title='Delivea - Request A Delivery'>
       <Nav />
     </Container>
   );
 };
 
-export default Home;
+export default Request;

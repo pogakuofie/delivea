@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = () => {
@@ -7,10 +8,18 @@ const Nav = () => {
       <Logo>DELIVEA</Logo>
       <Menu>
         <UL>
-          <LI>Couriers</LI>
-          <LI>Track Order</LI>
-          <LI>API</LI>
-          <LI>About Us</LI>
+          <Link className='link' to={"/request"}>
+            <LI>Couriers</LI>
+          </Link>
+          <Link className='link' to={"/"}>
+            <LI>Track Order</LI>
+          </Link>
+          <Link className='link' to={"/docs"}>
+            <LI>API</LI>
+          </Link>
+          <Link className='link' to={"/about"}>
+            <LI>About Us</LI>
+          </Link>
         </UL>
       </Menu>
       <CTA>
@@ -24,13 +33,8 @@ const Nav = () => {
 export default Nav;
 
 const Bar = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   display: flex;
-  margin-left: 20px;
-  margin-right: 20px;
+  flex: 1;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -47,12 +51,16 @@ const UL = styled.ul`
 const LI = styled.li`
   margin-left: 15px;
   margin-right: 15px;
+  cursor: pointer;
+
+  &:visited {
+    text-decoration: none;
+  }
 `;
 
 const CTA = styled.div`
   display: flex;
   flex-drection: row;
-  justify-content: center;
   align-items: center;
 `;
 
@@ -67,11 +75,12 @@ const Button = styled.input`
   padding-left: 5px;
   padding-right: 5px;
   margin-left: 10px;
-  margin-right: 10px;
+  cursor: pointer;
 `;
 
 const Logo = styled.p`
   color: #4950ba;
   font-weight: 900;
   font-size: 24px;
+  cursor: pointer;
 `;

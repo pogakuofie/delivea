@@ -1,12 +1,19 @@
-.App {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+:root {
   height: 100vh;
 }
 
 body {
-  background-color: #e5e5e5;
   font-family: "Quicksand", sans-serif;
+}
+
+:visited,
+:link,
+:active {
+  text-decoration: none;
+  color: black;
+}
+
+:hover,
+:focus {
+  color: #4950ba;
 }
